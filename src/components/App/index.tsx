@@ -50,6 +50,7 @@ const SignupSchema = Yup.object().shape({
 		.min(3, "Name is required.")
 		.required("Name is required."),
 	email: Yup.string()
+		.lowercase()
 		.email("Must be a valid email.")
 		.notOneOf(emailAddresses, "Email already taken.")
 		.required("Email is required."),

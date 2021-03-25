@@ -3,7 +3,6 @@ import { Form, Formik } from "formik"
 import React from "react"
 import * as Yup from "yup"
 import FormikField from "../FormikField"
-import { FormikSelectItem } from "../FormikSelect"
 import "./App.css"
 
 interface FormValues {
@@ -17,25 +16,6 @@ const initialValues: FormValues = {
 	email: "",
 	password: "",
 }
-
-const positionItems: FormikSelectItem[] = [
-	{
-		label: "Front End",
-		value: "front_end",
-	},
-	{
-		label: "Back End",
-		value: "back_end",
-	},
-	{
-		label: "Dev Ops",
-		value: "dev_ops",
-	},
-	{
-		label: "QA",
-		value: "qa",
-	},
-]
 
 // Mock api email list of existing users
 const emailAddresses = ["test1@gmail.com", "test2@gmail.com", "test3@gmail.com"]
